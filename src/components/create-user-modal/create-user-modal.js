@@ -1,4 +1,4 @@
-import {NodeCreator} from '../../modules/NodeCreator';
+import {NodeCreator} from '../../utils/NodeCreator';
 import tmpl from './create-user-modal.tmpl';
 
 new NodeCreator('#root',
