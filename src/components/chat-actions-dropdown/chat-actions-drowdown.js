@@ -1,4 +1,4 @@
-import {NodeCreator} from '../../modules/NodeCreator';
+import {NodeCreator} from '../../utils/NodeCreator';
 import tmpl from './chat-actions-dropdown.tmpl';
 
 new NodeCreator('[data-name="chat-actions"]',

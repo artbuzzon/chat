@@ -10,7 +10,9 @@
 .idea
 # Generated files
 .idea/**/contentModel.xml
-
+.dist/*
+dist
+.cache
 # Sensitive or high-churn files
 .idea/**/dataSources/
 .idea/**/dataSources.ids

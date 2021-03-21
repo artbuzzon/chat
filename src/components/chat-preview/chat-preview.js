@@ -1,6 +1,6 @@
-import {NodeCreator} from '../../modules/NodeCreator';
+import {NodeCreator} from '../../utils/NodeCreator';
 import tmpl from './chat-preview.tmpl';
-import {chats} from '../../modules/constants';
+import {chats} from '../../utils/constants';
 
 const chatNode = new NodeCreator('[data-name="chats-container"]',
     tmpl);

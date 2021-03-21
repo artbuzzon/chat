@@ -1,4 +1,4 @@
-import {NodeCreator} from '../../modules/NodeCreator';
+import {NodeCreator} from '../../utils/NodeCreator';
 import tmpl from './chat-attach-dropdown.tmpl';
 
 const chatAttachBtnEl = document.querySelector('[data-name="chat-attach-actions"]');
