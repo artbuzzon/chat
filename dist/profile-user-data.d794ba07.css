@@ -1,0 +1,258 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNS-Light"), local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Segoe UI Light"), local("Ubuntu Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+@font-face {
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 300;
+  src: local(".SFNS-LightItalic"), local(".SFNSText-LightItalic"), local(".HelveticaNeueDeskInterface-Italic"), local(".LucidaGrandeUI"), local("Segoe UI Light Italic"), local("Ubuntu Light Italic"), local("Roboto-LightItalic"), local("DroidSans"), local("Tahoma");
+}
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 400;
+  src: local(".SFNS-Regular"), local(".SFNSText-Regular"), local(".HelveticaNeueDeskInterface-Regular"), local(".LucidaGrandeUI"), local("Segoe UI"), local("Ubuntu"), local("Roboto-Regular"), local("DroidSans"), local("Tahoma");
+}
+@font-face {
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 400;
+  src: local(".SFNS-Italic"), local(".SFNSText-Italic"), local(".HelveticaNeueDeskInterface-Italic"), local(".LucidaGrandeUI"), local("Segoe UI Italic"), local("Ubuntu Italic"), local("Roboto-Italic"), local("DroidSans"), local("Tahoma");
+}
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 500;
+  src: local(".SFNS-Medium"), local(".SFNSText-Medium"), local(".HelveticaNeueDeskInterface-MediumP4"), local(".LucidaGrandeUI"), local("Segoe UI Semibold"), local("Ubuntu Medium"), local("Roboto-Medium"), local("DroidSans-Bold"), local("Tahoma Bold");
+}
+@font-face {
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 500;
+  src: local(".SFNS-MediumItalic"), local(".SFNSText-MediumItalic"), local(".HelveticaNeueDeskInterface-MediumItalicP4"), local(".LucidaGrandeUI"), local("Segoe UI Semibold Italic"), local("Ubuntu Medium Italic"), local("Roboto-MediumItalic"), local("DroidSans-Bold"), local("Tahoma Bold");
+}
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 700;
+  src: local(".SFNS-Bold"), local(".SFNSText-Bold"), local(".HelveticaNeueDeskInterface-Bold"), local(".LucidaGrandeUI"), local("Segoe UI Bold"), local("Ubuntu Bold"), local("Roboto-Bold"), local("DroidSans-Bold"), local("Tahoma Bold");
+}
+@font-face {
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 700;
+  src: local(".SFNS-BoldItalic"), local(".SFNSText-BoldItalic"), local(".HelveticaNeueDeskInterface-BoldItalic"), local(".LucidaGrandeUI"), local("Segoe UI Bold Italic"), local("Ubuntu Bold Italic"), local("Roboto-BoldItalic"), local("DroidSans-Bold"), local("Tahoma Bold");
+}
+html {
+  font-family: system-ui, sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.3rem;
+}
+
+main {
+  height: 100vh;
+  font-size: 1.4rem;
+}
+
+.input-field-container {
+  display: flex;
+  flex-direction: column;
+}
+.input-field-container:not(:last-of-type) {
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.mask {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+@charset "UTF-8";
+.profile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  min-width: 36rem;
+  flex-direction: column;
+  padding: 2rem;
+  border: 1px solid black;
+}
+.profile__title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.profile__auth-btn {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.profile__content-avatar {
+  width: 4.7rem;
+  height: 4.7rem;
+  background-color: lightgray;
+  border: 1px solid black;
+  position: relative;
+  margin-top: 1rem;
+}
+.profile__content-avatar::after {
+  content: "👤";
+  position: absolute;
+  color: black;
+  font-size: 4.7rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.profile__content-field {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.profile__content-field__center {
+  display: flex;
+  justify-content: center;
+}
+.profile__content-save-btn {
+  margin-top: 1rem;
+}
+.create-user-modal-mask {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(211, 211, 211, 0.4);
+  height: 100%;
+  width: 100%;
+}
+
+.create-user-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  background-color: white;
+  padding: 2rem;
+}
+.chat-dropdown {
+  position: absolute;
+  right: 0;
+  font-size: 1.4rem;
+  padding: 1rem;
+  border: 1px solid black;
+  white-space: nowrap;
+  background-color: white;
+}
+
+.chat-dropdown__action {
+  padding: 1rem;
+}
+.chat-dropdown__action:not(:last-of-type) {
+  border-bottom: 1px solid black;
+}
+.chat-attach-dropdown {
+  position: absolute;
+  left: 0;
+  bottom: 5rem;
+  font-size: 1.4rem;
+  padding: 1rem;
+  border: 1px solid black;
+  white-space: nowrap;
+  background-color: white;
+}
+
+.chat-attach-dropdown__action {
+  padding: 1rem;
+}
+.chat-attach-dropdown__action:not(:last-of-type) {
+  border-bottom: 1px solid black;
+}
+
+/*# sourceMappingURL=/profile-user-data.d794ba07.css.map */
